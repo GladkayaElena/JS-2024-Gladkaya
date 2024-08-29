@@ -26,7 +26,7 @@
 /*******************************************************************************/
 // - Є "брудна" стрінга let str = ' dirty string   ' . Почистити її від зайвих пробілів.
 
-// let str = ' dirty string   ';
+
 // while (str.startsWith(' ')){
 //     str = str.slice(1);
 // }
@@ -34,6 +34,13 @@
 //     str = str.slice(0, -1);
 // }
 // console.log(str);
+
+// более правильный ответ
+// let str = ' dirty string   ';
+// const s = str.trim();
+// console.log(s);
+// console.log(s.length);
+// console.log(str.length);
 
 /*******************************************************************************/
 // - Напишіть функцію stringToarray(str), яка перетворює рядок на масив слів.
@@ -59,16 +66,27 @@
 // sortNums(nums,'descending') // [21,11,3]
 
 // let nums = [11,21,3];
-// let sorts = nums.sort((a1, a2) => {
-//     return a1-a2;
-// });
-// console.log(sorts);
+// function sortNums(arrayOfNums, direction) {
+// if(direction === 'ascending') return arrayOfNums.sort((a, b) => a - b);
+// if(direction === 'descending') return arrayOfNums.sort((a, b) => b - a);
+// }
+// console.log(sortNums(nums, 'ascending'));
+// console.log(sortNums(nums, 'descending'));
+
+// или
 
 // let nums = [11,21,3];
-// let sort1 = nums.sort((a1, a2) => {
-//     return a2-a1;
-// });
-// console.log(sort1);
+// function sortNums(arrayOfNums, direction) {
+//     const sort = arrayOfNums.sort((a, b) => a - b);
+//     if (direction === 'ascending'){
+//         return sort;
+//     }
+//     if (direction === 'descending'){
+//         return sort.reverse();
+//     }
+// }
+// console.log(sortNums(nums, 'ascending'));
+// console.log(sortNums(nums, 'descending'));
 /*******************************************************************************/
 // ==========================
 // - є масив
